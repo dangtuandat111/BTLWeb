@@ -1,0 +1,12 @@
+note for 25/02/2021: 
+- Giải thích sơ đồ erd
+	+ Kho???
+	+ Hàng hóa là gì?Phân loại không?
+	+ 2 lớp người dùng là gì?
+	+ Xử lí việc hàng hư hỏng, thất lạc?
+	+ Phân chia lại user?
+	+ Có nên chỉnh sưa lại bảng kho?
+	+ Có nên bổ sung nhà cung cấp?
+- Phần title sử dụng tempdata
+- thiểu icon trang web
+- truyền dữ liệu vào trang home ( index ) 
