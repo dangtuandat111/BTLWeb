@@ -1,0 +1,55 @@
+note for db: ( Chưa Chốt ) ĐÂY LÀ DB QUẢN LÝ KHO
+- ProductList : Danh sách Sản phẩm
++ id : mã sản phẩm			|int		|auto increment		|primary key
++ product_name : tên sản phẩm		|nvarchar(200)	|not null
++ detail : thông tin chi tiết		|text		|(sẽ tạo thêm phần edit text trong giao diện )
+
+- Role: Vị trí
++ id : mã vị trí			|int 		|(0:Nhân viên / 1:Admin)
++ detail : chi tiết permission		|text		|not null
+
+- Product: Sản phẩm
++ id : mã sản phẩm			|nvarchar(200) 	|(viết code để tạo) 	|primary key
++ count : số lượng ( còn trong kho )	|long		|not null		|(sẽ tạo trigger)
++ id_pd : mã sản phẩm			|nvarchar(200)	|foreign key
+
+- User: Người dùng
++ id : mã người dùng			|nvarchar(200)	|(viết code để tạo)	|primary key
++ uer_name : tên người dùng		|nvarchar(200) 	|not nulll
++ gender : giới tính			|nvarchar(200)	
++ id_role : mã vị trí			|nvarchar(200)	|foreign key
++ phoneNumber: số điện thoại		|nvarchar(200)	
++ email: địa chỉ email			|nvarchar(200)	|not null
+
+- ReceiptBill: phiếu nhập hàng
++ id : mã phiểu nhận 			|nvarchar(200)	|(tự viết code tạo mã)	|primary key
++ id_user : mã người dùng		|nvarchar(200)	|foreign key
++ id_sup : mã nhà cung cấp		|nvarchar(200)	|foreign key
++ dateCreate: ngày tạo phiếu		|date		|date			|not null
++ total : tổng tiền(có hay ko?)		|long		
+
+- DetailReceipt: chi tiết phiếu nhập
++ id : mã chi tiết			|int		|auto complete		|primary key
++ id_rb: mã phiếu nhận			|nvarchar(200)	|(tự viết code tạo mã)	|foreign key
++ id_sp: mã sản phẩm			|nvarchar(200) 	|(viết code để tạo) 	|foreign key
++ count: số lượng nhập hàng		|long		|not null		|(sẽ tạo trigger cho count trong bảng sản phẩm)
++ price: đơn giá sản phẩm nhập		|long		|not null
+
+- DeliveryBill: phiếu xuất hàng
++ id : mã phiểu xuất			|nvarchar(200)	|(tự viết code tạo mã)	|primary key
++ id_user : mã người dùng		|nvarchar(200)	|foreign key
++ dateCreate: ngày tạo phiếu		|date		|date			|not null
++ total : tổng tiền(có hay ko?)		|long
+
+- DetailDelivery: chi tiết phiếu xuất
++ id : mã chi tiết			|int		|auto complete		|primary key
++ id_rb: mã phiếu xuất			|nvarchar(200)	|(tự viết code tạo mã)	|foreign key
++ id_sp: mã sản phẩm			|nvarchar(200) 	|(viết code để tạo) 	|foreign key
++ count: số lượng nhập hàng		|long		|not null		|(sẽ tạo trigger cho count trong bảng sản phẩm)
++ price: đơn giá sản phẩm nhập		|long		|not null
+
+- Supier: nhà cung cấp
++ id : mã nhà cung cấp			|int		|auto complete		|primary key
++ name : tên nhà cung cấp 		|nvarchar(200)	|null
++ email : địa chỉ emai			|nvarchar(200)	|not null
++ phoneNumber : số điện thoại		|nvarchar(200)	|null
