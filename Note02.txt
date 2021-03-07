@@ -1,0 +1,23 @@
+note for 26/02/2021:
+- Quản lý 1 kho duy nhất.
+- Thời gian nên để là date hay datetime?
+- Có nên tạo thêm nhà cung cấp?
+- Chia 2 nhóm người dùng là: 
++ Nhân viên: Có thể tạo phiếu nhập hoặc phiếu xuất
++ Admin: Có thể tạo phiếu nhập hoặc phiếu xuất
+- Nếu nhập hàng bị sai thì sao?
+- Thống nhất là mặt hàng bán là như thế nào?
++ Liệt kê các mặt hàng kinh doanh?
++ Phân loại
+- Xây dựng mã sản phẩm / mã sản phẩm trong ds sản phẩm.
+- Chú ý khi viết tên bảng thuộc tính.
+- Tạo trigger cập nhật số lượng hàng hóa trong kho mỗi khi bán hàng 
+và nhập hàng.
+- Vai trò:
++ Admin được làm tác động lên tất cả bảng
++ Admin liên kết với nhà cung cấp như thế nào?
++ Nhân viên được tác động lên bảng nhập / xuất hóa đơn
+- Có nên tạo tổng tiền trong phiếu nhận hàng/ phiếu xuất hàng
+- Để đơn vị price là gì? Hiện đang để là int
+- Làm như thế nào để biết ai chỉnh sửa db
+- Kiểm kê là như thế nào?

@@ -43,6 +43,7 @@
         gridLineColor: '#eef0f2',
         resize: true
     });
+    
 
     $('#info-circle-card').circleProgress({
         value: 0.70,

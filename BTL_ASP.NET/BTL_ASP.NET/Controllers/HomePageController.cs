@@ -14,7 +14,19 @@ namespace BTL_ASP.NET.Controllers
             return View();
         }
 
+        public ActionResult Profile()
+        {
+            return View();
+        }
 
+        public ActionResult Sign_Up()
+        {
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
 
     }
 }

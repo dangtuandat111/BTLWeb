@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="~/Content/vendor/owl-carousel/css/owl.theme.default.min.css">
     <link href="~/Content/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="~/Content/css/style.css" rel="stylesheet">
-    
+    <!--Phus-->
+    <link href="~/Content/phu/css/StyleProfile.css" rel="stylesheet">
+
 
 </head>
 
@@ -76,7 +78,14 @@
             Content body start
         ***********************************-->
 
-        @RenderBody();
+        <div class="content-body">
+            <!-- row -->
+            <div class="container-fluid">
+                @RenderBody();
+
+            </div>
+        </div>
+
         <!--**********************************
             Content body end
         ***********************************-->
@@ -127,6 +136,10 @@
     <script src="~/Content/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
     <script src="~/Content/vendor/jquery.counterup/jquery.counterup.min.js"></script>
     <script src="~/Scripts/js/dashboard/dashboard-1.js"></script>
+
+    <!--Phu-->
+    <script src="~/Content/phu/js/quixnav-init.js"></script>
+    <script src="~/Content/phu/js/custom.min.js"></script>
 
 </body>
 
